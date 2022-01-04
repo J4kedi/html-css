@@ -1,0 +1,20 @@
+/* Shorthand - background
+    color > image > position >/> size > repeat > attachment
+*/
+
+
+body {
+    background: royalblue url(../imagens/espaco.jpg) 100% 100%/cover no-repeat fixed;
+    position: relative;
+    height: 97vh;
+}
+
+#astronauta {
+    background: transparent url(../imagens/astronauta.png) 100% 100%/cover no-repeat;
+    position: absolute;
+    height: 500px;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
