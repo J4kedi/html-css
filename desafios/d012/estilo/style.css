@@ -13,64 +13,78 @@
 */
 
 :root {
-    --fonte-padrao: Verdana, Geneva, Tahoma, sans-serif;
-    --fonte-1: 'Passion One', cursive;
-    --fonte-2: 'Sriracha', cursive;
+    --fonte-1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte-2: 'Passion One', cursive;
+    --fonte-3: 'Sriracha', cursive;
 }
 
 * {
     padding: 0px;
     margin: 0px;
+    font-size: 1em;
 }
 
 html, body {
     min-height: 100vh;
     background-color: darkgray;
+    font-family: var(--fonte-1);
 }
 
 header {
     background: black;
     color: white;
     text-align: center;
-    min-height: 150px;
 }
 
-header h1 {
+header > h1 {
     padding-top: 50px;
     font-variant: small-caps;
-    font-family: var(--fonte-1);
     font-size: 10vw;
+    font-family: var(--fonte-2);
 }
 
 header > p {
     padding-bottom: 50px;
-    font-family: var(--fonte-padrao);
 }
 
-header a {
+header a, footer a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: bolder;
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline;
+}
+
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 2em;
+    font-family: var(--fonte-3);
+    font-size: 3vw;
+}
+
+section > p {
+    padding-top: 2rem;
 }
 
 section.normal {
-    background: white; 
-    font-family: var(--fonte-2);
-    padding: 100px 0px 80px 30px;
-    font-size: 4vw;
+    background: white;
 }
 
 section.imagem {
-    padding: 100px 0px 80px 30px;
+    background: rgb(100, 100, 100);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.380);
 }
 
-section.imagem p {
-    background: rgba(0, 0, 0, 0.308);
+section.imagem > p {
+    background: rgba(0, 0, 0, 0.500);
     display: inline-block;
-    color: white;
-    font-size: 4vw;
-    padding: 10px 5px 10px 5px;
-    font-family: var(--fonte-2);
+    padding: 10px 5px;
+    text-shadow: 1px 1px 0px black;
 }
 
 section.imagem#img1 {
@@ -86,21 +100,14 @@ section.imagem#img1 {
 }
 
 section.imagem#img2 {
-    background: url(../imagens/background002.jpg) right center/cover no-repeat fixed;
+    background: url(../imagens/background002.jpg);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 footer {
     background: black;
     color: white;
-    margin: auto;
+    text-align: center;
     padding: 10px;
-    font-size: 1.5vw;
-    font-family: var(--fonte-padrao);
-}
-
-footer a {
-    text-decoration: none;
-    color: white;
-    font-size: large;
-    font-family: var(--fonte-1);
 }
