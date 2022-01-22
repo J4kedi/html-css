@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <title>Tabelas</title>
+    <style>
+/*
+table tr > nth-child(2) {}
+Esse código (por exemplo) serve para estilizar a segunda coluna da tabela. Ele faz isso aplicando o estilo ao segundo elemento <td> ou <th> de cada linha da tabela.
+
+
+Funciona bem, mas tenham em mente que usar <colgroup> e <col> é a melhor maneira. Fica mais semântico e mais flexível.
+
+O atributo "span" facilita muito. Ele é o que torna mais flexível. Para aplicar um mesmo estilo a, por exemplo, a segunda e a terceira colunas sem usar <colgroup> e <col>, seria necessário fazer desta forma, que é mais longa e menos semântica:
+table tr > nth-child(2), table tr > nth-child(3) {}
+
+Então, prefiram usar <colgroup> e <col>. O resultado é melhor. É mais semântico (coisa que facilita a leitura do HTML e do CSS) e é mais flexível.
+*/
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+        }
+
+        caption {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 8px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+        }
+
+        .destaque {
+            background-color: blue;
+        }
+
+        col.c_nome {
+            background-color: blue;
+        }
+
+        /*col.c_sexo, col.c_idade {
+            background-color: yellow;
+        }*/
+
+        col.c_group {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício de Tabela</h1>
+    
+    <table>
+        <colgroup>
+            <col class="c_nome">
+            <!--<col class="c_sexo">
+            <col class="c_idade">-->
+            <col class="c_group" span="2">
+            <col class="c_prof">
+        </colgroup>
+        <caption>Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Ana Maria</td>
+            <td>F</td>
+            <td>25</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Claudio</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Gustavo</td>
+            <td>M</td>
+            <td>42</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Hélio</td>
+            <td>M</td>
+            <td>19</td>
+            <td>Vendedor</td>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>39</td>
+            <td>Médica</td>
+        </tr>
+        <tr>
+            <td>Otávio</td>
+            <td>M</td>
+            <td>22</td>
+            <td>Nutricionista</td>
+        </tr>
+    </table>
+</body>
+</html>
