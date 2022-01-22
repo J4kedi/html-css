@@ -19,6 +19,8 @@
             width: 500px;
             margin: auto;
             border-collapse: collapse;
+            position: relative;
+
         }
 
         td, th {
@@ -38,6 +40,16 @@
         thead, tfoot {
             background: gray;
             color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background: gray;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background: lightgray;
         }
 
         td.num {
